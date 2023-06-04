@@ -10,6 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1371791597874143831}
   - component: {fileID: 1026797323063310481}
+  - component: {fileID: 8683815884271744960}
+  - component: {fileID: 8292042751801958953}
+  - component: {fileID: 6160281605664789677}
+  - component: {fileID: -8711223311842597310}
   m_Layer: 0
   m_Name: pfMineradora
   m_TagString: Untagged
@@ -59,6 +63,56 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8683815884271744960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6607126675018522059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92e236319f8b1e419b5776d24e2435f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8292042751801958953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6607126675018522059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc17d2264a079f458e314279436e333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingType: {fileID: 11400000, guid: a3af353b2991f674f871e99c4abaa00b, type: 2}
+--- !u!114 &6160281605664789677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6607126675018522059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26bfd0ea1ff49d347af300d982731a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthAmountMax: 100
+--- !u!114 &-8711223311842597310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6607126675018522059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f43a1af10a36c841bbdf7c648ba39c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7024883656073065807
 GameObject:
   m_ObjectHideFlags: 0

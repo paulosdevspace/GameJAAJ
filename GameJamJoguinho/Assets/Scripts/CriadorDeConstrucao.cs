@@ -8,11 +8,16 @@ public class CriadorDeConstrucao : MonoBehaviour
 {
     public static CriadorDeConstrucao Instance { get; private set;}
     // Start is called before the first frame update
+    public event EventHandler<OnActiveBuildingTypeChangedEventArgs> OnActiveBuildingTypeChanged;
+    public class OnActiveBuildingTypeChangedEventArgs : EventArgs
+    {
+        public BuildingTypeSO activeBuildingType;
+    }
 
     [SerializeField] private Building navePrincipal;
     [SerializeField] private GameObject protagonista;
     private BuildingTypeSO activeBuildingType;
-    //private BuildingTypeListSO buildingTypeList;
+    private BuildingTypeListSO buildingTypeList;
     [SerializeField] private BuildingTypeSO nave;
 
     private Camera mainCamera;
@@ -37,14 +42,29 @@ public class CriadorDeConstrucao : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && IsInsideRobotArea(protagonista, UtilsClass.GetWorldMousePosition()))
-        {   
-            if (ResourceManager.instance.CanAfford(nave.constructionResourceCostArray))
+        if (activeBuildingType != null)
+        {
+            if (Input.GetMouseButtonDown(0) && IsInsideRobotArea(protagonista, UtilsClass.GetWorldMousePosition()))
             {
-                ResourceManager.instance.SpendResources(nave.constructionResourceCostArray);
-                Instantiate(navePrincipal, protagonista.transform.position, Quaternion.identity);
+                if (!EventSystem.current.IsPointerOverGameObject())
+                {
+                    if (ResourceManager.instance.CanAfford(activeBuildingType.constructionResourceCostArray))
+                    {
+                        ResourceManager.instance.SpendResources(activeBuildingType.constructionResourceCostArray);
+                        Instantiate(activeBuildingType.prefab, protagonista.transform.position, Quaternion.identity);
+                    }
+                }
             }
         }
+    }
+    public void SetActiveBuildingType(BuildingTypeSO buildingType)
+    {
+        activeBuildingType = (buildingType);
+        OnActiveBuildingTypeChanged?.Invoke(this, new OnActiveBuildingTypeChangedEventArgs { activeBuildingType = activeBuildingType });
+    }
+    public BuildingTypeSO GetActiveBuildingType()
+    {
+        return activeBuildingType;
     }
 
     private bool IsInsideRobotArea(GameObject protagonista, Vector3 position)

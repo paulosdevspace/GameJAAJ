@@ -22,14 +22,14 @@ public class SelectUI : MonoBehaviour
             Transform buildingBtnTransform = Instantiate(buildingBtnTemplate, transform);
             buildingBtnTransform.gameObject.SetActive(true);
             
-            buildingBtnTransform.GetComponent<RectTransform>().anchoredPosition += new Vector2(index * 60, 0);
+            buildingBtnTransform.GetComponent<RectTransform>().anchoredPosition += new Vector2(index * 140, 0);
             buildingBtnTransform.Find("image").GetComponent<Image>().sprite = buildingTypeSO.sprite;
 
-            /*buildingBtnTransform.GetComponent<Button>().onClick.AddListener(() =>
+            buildingBtnTransform.GetComponent<Button>().onClick.AddListener(() =>
             {
                 buildingManager.SetActiveBuildingType(buildingTypeSO);
                 UpdateSelectedVisual();
-            });*/
+            });
 
             buildingBtnDictionary[buildingTypeSO] = buildingBtnTransform;
 
@@ -37,7 +37,7 @@ public class SelectUI : MonoBehaviour
         }
     }
 
-    /*private void Start()
+    private void Start()
     {
         UpdateSelectedVisual();
     }
@@ -51,5 +51,5 @@ public class SelectUI : MonoBehaviour
 
         BuildingTypeSO activeBuildingType = buildingManager.GetActiveBuildingType();
         buildingBtnDictionary[activeBuildingType].Find("selected").gameObject.SetActive(true);
-    }*/
+    }
 }
