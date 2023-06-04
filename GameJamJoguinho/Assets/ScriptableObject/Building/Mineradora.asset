@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be4796037f9b2d48ac933cf5f589e7d, type: 3}
+  m_Name: Mineradora
+  m_EditorClassIdentifier: 
+  nameString: 
+  prefab: {fileID: 1371791597874143831, guid: 524c3141cda8e3f46aacf5c6807aee44, type: 3}
+  hasResourceGeneratorData: 1
+  resourceGeneratorData:
+    timerMax: 2
+    resourceType: {fileID: 11400000, guid: 4ff6f94364e96d14fb29db4de0726098, type: 2}
+    resourceDetectionRadius: 7
+    maxResourceAmount: 7
+  sprite: {fileID: 0}
+  minConstructionRadius: 0
+  constructionResourceCostArray:
+  - resourceType: {fileID: 11400000, guid: 4ff6f94364e96d14fb29db4de0726098, type: 2}
+    amount: 10
+  healthAmountMax: 0
+  constructionTimerMax: 0
