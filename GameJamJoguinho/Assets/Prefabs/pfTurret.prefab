@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4697284910203774122}
   - component: {fileID: 2073128746951885265}
   m_Layer: 0
-  m_Name: sprite (1)
+  m_Name: torretaCorpo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5606135340521959514}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4697284910203774122
 SpriteRenderer:
@@ -111,7 +111,6 @@ GameObject:
   - component: {fileID: -4288058480879844921}
   - component: {fileID: 111040116262277712}
   - component: {fileID: 24506031061070512}
-  - component: {fileID: -3042540688293365995}
   - component: {fileID: -5823369429924831048}
   m_Layer: 0
   m_Name: pfTurret
@@ -132,7 +131,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2130837580675690572}
   - {fileID: 8611977982571592137}
   - {fileID: 6739938121385983666}
   m_Father: {fileID: 0}
@@ -189,19 +187,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f43a1af10a36c841bbdf7c648ba39c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-3042540688293365995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4517481548289917293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e4f7cf515d16a46a2f06cfc8695e5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shooterTimerMax: 0.8
 --- !u!114 &-5823369429924831048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,11 +210,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8611977982571592137}
   - component: {fileID: 4028681326296100854}
-  - component: {fileID: 6610134100831600570}
   - component: {fileID: 2405565629529544188}
+  - component: {fileID: 1345671717343997641}
   m_Layer: 0
-  m_Name: sprite
-  m_TagString: Untagged
+  m_Name: torretaCabeca
+  m_TagString: TorretaHead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -242,12 +227,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6563862627426156888}
   m_LocalRotation: {x: -0, y: -0, z: 0.0000007599591, w: 1}
-  m_LocalPosition: {x: 0.01, y: 0.02, z: 1}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalPosition: {x: 0.147, y: 0.367, z: 1}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 2130837580675690572}
   m_Father: {fileID: 5606135340521959514}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 720}
 --- !u!212 &4028681326296100854
 SpriteRenderer:
@@ -289,8 +275,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1da14daf0656f5a4fa0d2fbab4fcd143, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 0f74e00be7ab8dc47ba9a05cd4b038d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -301,18 +287,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6610134100831600570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6563862627426156888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db30faaa7e26a8e49bc876740de8fbde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2405565629529544188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,6 +301,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runOnce: 1
   positionOffsetY: -3.5
+--- !u!114 &1345671717343997641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6563862627426156888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e4f7cf515d16a46a2f06cfc8695e5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shooterTimerMax: 0.8
 --- !u!1 &7176129995651381257
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,11 +337,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7176129995651381257}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.07, y: 0.2, z: 0.002853781}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.0000007599591, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.857143, y: 2.857143, z: 2.857143}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5606135340521959514}
+  m_Father: {fileID: 8611977982571592137}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

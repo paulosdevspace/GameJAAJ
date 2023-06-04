@@ -875,6 +875,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1345671717343997641, guid: e756a58c3285e86418ee404aad68a550, type: 3}
+      propertyPath: shooterTimerMax
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4517481548289917293, guid: e756a58c3285e86418ee404aad68a550, type: 3}
       propertyPath: m_Name
       value: pfTurret
@@ -885,11 +889,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606135340521959514, guid: e756a58c3285e86418ee404aad68a550, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 9.69
       objectReference: {fileID: 0}
     - target: {fileID: 5606135340521959514, guid: e756a58c3285e86418ee404aad68a550, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.14
+      value: -2.92
       objectReference: {fileID: 0}
     - target: {fileID: 5606135340521959514, guid: e756a58c3285e86418ee404aad68a550, type: 3}
       propertyPath: m_LocalPosition.z
@@ -923,7 +927,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6610134100831600570, guid: e756a58c3285e86418ee404aad68a550, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e756a58c3285e86418ee404aad68a550, type: 3}
 --- !u!1 &1308310826
 GameObject:
