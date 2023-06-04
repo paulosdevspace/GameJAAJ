@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7be4796037f9b2d48ac933cf5f589e7d, type: 3}
   m_Name: Mineradora
   m_EditorClassIdentifier: 
-  nameString: 
+  nameString: Mineradora
   prefab: {fileID: 1371791597874143831, guid: 524c3141cda8e3f46aacf5c6807aee44, type: 3}
   hasResourceGeneratorData: 1
   resourceGeneratorData:
