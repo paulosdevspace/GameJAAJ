@@ -16,13 +16,14 @@ public class SelectUI : MonoBehaviour
 
         buildingBtnDictionary = new Dictionary<BuildingTypeSO, Transform>();
 
-        int index = 0;
+        float index = 0.025f;
         foreach (BuildingTypeSO buildingTypeSO in buildingTypeSOList)
         {
             Transform buildingBtnTransform = Instantiate(buildingBtnTemplate, transform);
             buildingBtnTransform.gameObject.SetActive(true);
-            
-            buildingBtnTransform.GetComponent<RectTransform>().anchoredPosition += new Vector2(index * 140, 0);
+
+            float offsetAmount = 160f;
+            buildingBtnTransform.GetComponent<RectTransform>().anchoredPosition += new Vector2(offsetAmount * index, -1f);
             buildingBtnTransform.Find("image").GetComponent<Image>().sprite = buildingTypeSO.sprite;
 
             buildingBtnTransform.GetComponent<Button>().onClick.AddListener(() =>

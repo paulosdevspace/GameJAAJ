@@ -16,14 +16,14 @@ public class ResourcesUI : MonoBehaviour
         Transform resourceTemplate = transform.Find("resourceTemplate");
         resourceTemplate.gameObject.SetActive(false);
 
-        int index = 0;
+        float index = 0.5f;
         foreach (ResourceTypeSO resourceType in resourceTypeList.list)
         {
             Transform resourceTransform = Instantiate(resourceTemplate, transform);
             resourceTransform.gameObject.SetActive(true);
 
             float offsetAmount = -120f;
-            resourceTransform.GetComponent<RectTransform>().anchoredPosition = new Vector2(offsetAmount * index, 0);
+            resourceTransform.GetComponent<RectTransform>().anchoredPosition = new Vector2(-100, offsetAmount * index);
 
             resourceTransform.Find("image").GetComponent<Image>().sprite = resourceType.sprite;
 
