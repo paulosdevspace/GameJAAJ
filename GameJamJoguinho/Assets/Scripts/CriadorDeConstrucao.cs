@@ -42,6 +42,8 @@ public class CriadorDeConstrucao : MonoBehaviour
     }
     void Update()
     {
+        Vector3 posicaospawn = protagonista.transform.position;
+        posicaospawn.y = protagonista.transform.position.y + 2f;
         if (activeBuildingType != null)
         {
             if (Input.GetMouseButtonDown(0) && IsInsideRobotArea(protagonista, UtilsClass.GetWorldMousePosition()))
@@ -51,7 +53,7 @@ public class CriadorDeConstrucao : MonoBehaviour
                     if (ResourceManager.instance.CanAfford(activeBuildingType.constructionResourceCostArray))
                     {
                         ResourceManager.instance.SpendResources(activeBuildingType.constructionResourceCostArray);
-                        Instantiate(activeBuildingType.prefab, protagonista.transform.position, Quaternion.identity);
+                        Instantiate(activeBuildingType.prefab, posicaospawn, Quaternion.identity);
                     }
                 }
             }
