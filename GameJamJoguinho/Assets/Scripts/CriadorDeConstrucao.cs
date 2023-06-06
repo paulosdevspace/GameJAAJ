@@ -46,7 +46,7 @@ public class CriadorDeConstrucao : MonoBehaviour
         posicaospawn.y = protagonista.transform.position.y + 2f;
         if (activeBuildingType != null)
         {
-            if (Input.GetMouseButtonDown(0) && IsInsideRobotArea(protagonista, UtilsClass.GetWorldMousePosition()))
+            if (Input.GetMouseButtonDown(0) && CanSpawnBuilding(activeBuildingType, UtilsClass.GetWorldMousePosition()))
             {
                 if (!EventSystem.current.IsPointerOverGameObject())
                 {
@@ -69,25 +69,67 @@ public class CriadorDeConstrucao : MonoBehaviour
         return activeBuildingType;
     }
 
-    private bool IsInsideRobotArea(GameObject protagonista, Vector3 position)
+
+    private bool CanSpawnBuilding(BuildingTypeSO buildingType, Vector3 position)
     {
-        BoxCollider2D boxCollider2D = protagonista.GetComponent<BoxCollider2D>();
+        BoxCollider2D boxCollider2D = buildingType.prefab.GetComponent<BoxCollider2D>();
 
         Collider2D[] collider2DArray = Physics2D.OverlapBoxAll(position + (Vector3)boxCollider2D.offset, boxCollider2D.size, 0);
 
-        bool isAreaClear = collider2DArray.Length == 1 ;
-        if (isAreaClear)
+        bool isAreaClear = collider2DArray.Length == 0;
+        if (!isAreaClear)
         {
-            Debug.Log("aaaaaaaaaaaa");
-            return true;
-        }
-        else
-        {
-            Debug.Log("bbbbbbbbbbbbbb");
-
+            Debug.Log("aaaaaaaaaaaaaaaa");
             return false;
+
         }
 
+        collider2DArray = Physics2D.OverlapCircleAll(position, buildingType.minConstructionRadius);
+        foreach (Collider2D collider2D in collider2DArray)
+        {
+            //collider inside construction radius
+            BuildingTypeHolder buildingTypeHolder = collider2D.GetComponent<BuildingTypeHolder>();
+            if (buildingTypeHolder != null)
+            {
+                //has buildind type holder
+                if (buildingTypeHolder.buildingType == buildingType)
+                {
+                    //there is another building of this type within radius
+                    Debug.Log("there is another building of this type within radius");
+
+                    return false;
+                }
+            }
+        }
+
+        if (buildingType.hasResourceGeneratorData)
+        {
+            ResourceGeneratorData resourceGeneratorData = buildingType.resourceGeneratorData;
+            int nearbyResourceAmount = ResourceGenerator.GetNearbyResourceAmount(resourceGeneratorData, position);
+
+            if (nearbyResourceAmount == 0)
+            {
+                Debug.Log("no resources nodes");
+                return false;
+            }
+        }
+
+
+        float maxConstructionRadius = 25;
+        collider2DArray = Physics2D.OverlapCircleAll(position, maxConstructionRadius);
+        foreach (Collider2D collider2D in collider2DArray)
+        {
+            //collider inside construction radius
+            BuildingTypeHolder buildingTypeHolder = collider2D.GetComponent<BuildingTypeHolder>();
+            if (buildingTypeHolder != null)
+            {
+                //its a building 
+                //errorMessage = null;
+                return true;
+            }
+        }
+        //errorMessage = "Too far from any building";
+        return false;
     }
     public Building GetHQBuilding()
     {

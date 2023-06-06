@@ -22,7 +22,7 @@ public class SelectUI : MonoBehaviour
             Transform buildingBtnTransform = Instantiate(buildingBtnTemplate, transform);
             buildingBtnTransform.gameObject.SetActive(true);
 
-            float offsetAmount = 160f;
+            float offsetAmount = 150f;
             buildingBtnTransform.GetComponent<RectTransform>().anchoredPosition += new Vector2(offsetAmount * index, -1f);
             buildingBtnTransform.Find("image").GetComponent<Image>().sprite = buildingTypeSO.sprite;
 
