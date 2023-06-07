@@ -8,9 +8,6 @@ public class CameraHandler : MonoBehaviour
 {
     public static CameraHandler Instance { get; private set;}
 
-
-
-
     [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
 
     private float orthographicSize;
@@ -31,43 +28,9 @@ public class CameraHandler : MonoBehaviour
     }
     private void Update()
     {
-        HandleMovement();
         HandleZoom();
-
-       
     }
-    private void HandleMovement()
-    {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
-
-        float edgeScrollingSize = 30;
-        if (edgeScrolling)
-        {
-            if (Input.mousePosition.x > Screen.width - edgeScrollingSize)
-            {
-                x = +1f;
-            }
-            if (Input.mousePosition.x < edgeScrollingSize)
-            {
-                x = -1f;
-            }
-
-            if (Input.mousePosition.y > Screen.height - edgeScrollingSize)
-            {
-                y = +1f;
-            }
-            if (Input.mousePosition.y < edgeScrollingSize)
-            {
-                y = -1f;
-            }
-        }
-        Vector3 moveDir = new Vector3(x, y).normalized;
-
-        float camMovSpeed = 20f;
-
-        transform.position += moveDir * camMovSpeed * Time.deltaTime;
-    }
+   
     private void HandleZoom()
     {
         float zoomAmount = 2f;
@@ -75,7 +38,7 @@ public class CameraHandler : MonoBehaviour
         targetOrthographicSize += -Input.mouseScrollDelta.y * zoomAmount;
 
         float minOrthographicSize = 10;
-        float maxOrthographicSize = 30;
+        float maxOrthographicSize = 23;
 
         targetOrthographicSize = Mathf.Clamp(targetOrthographicSize, minOrthographicSize, maxOrthographicSize);
 
