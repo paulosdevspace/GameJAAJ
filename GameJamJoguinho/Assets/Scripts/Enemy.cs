@@ -23,6 +23,8 @@ public class Enemy : MonoBehaviour
     private Transform targetTransform;
     private Rigidbody2D rigidBody2D;
 
+    private Animator animator;
+
     private void Start()
     {
         rigidBody2D = GetComponent<Rigidbody2D>();
@@ -78,6 +80,41 @@ public class Enemy : MonoBehaviour
             float moveSpeed = 6f;
 
             rigidBody2D.velocity = moveDir * moveSpeed;
+
+            //Cima
+            if (targetTransform.position.y > transform.position.y) {
+                animator.SetInteger("andandoVertical", 1);
+            }
+
+            /*//Baixo
+            if (vertical < 0f)
+            {
+                animator.SetInteger("andandoVertical", -1);
+            }
+
+            //Direita
+            if (horizontal > 0f)
+            {
+                animator.SetInteger("AndandoHorizontal", 1);
+            }
+
+            //Esquerda
+            if (horizontal < 0f)
+            {
+                animator.SetInteger("AndandoHorizontal", -1);
+            }
+
+            //Idle Vertical
+            if (vertical == 0f)
+            {
+                animator.SetInteger("andandoVertical", 0);
+            }
+
+            //Idle Horizontal
+            if (horizontal == 0f)
+            {
+                animator.SetInteger("AndandoHorizontal", 0);
+            }*/
         }
         else
         {
