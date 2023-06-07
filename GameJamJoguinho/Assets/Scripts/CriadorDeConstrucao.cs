@@ -46,7 +46,7 @@ public class CriadorDeConstrucao : MonoBehaviour
         posicaospawn.y = protagonista.transform.position.y + 2.5f;
         if (activeBuildingType != null)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && CanSpawnBuilding(activeBuildingType,  posicaospawn))
+            if (Input.GetMouseButtonDown(0) && CanSpawnBuilding(activeBuildingType,  posicaospawn))
             {
                 if (!EventSystem.current.IsPointerOverGameObject())
                 {
