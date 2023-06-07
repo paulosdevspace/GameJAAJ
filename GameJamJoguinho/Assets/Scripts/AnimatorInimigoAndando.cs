@@ -9,7 +9,7 @@ public class AnimatorInimigoAndando : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(transform.position);
+        
     }
 
 }
