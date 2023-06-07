@@ -28,6 +28,7 @@ public class SelectUI : MonoBehaviour
 
             buildingBtnTransform.GetComponent<Button>().onClick.AddListener(() =>
             {
+                print("trocou " + buildingTypeSO.nameString);
                 buildingManager.SetActiveBuildingType(buildingTypeSO);
                 UpdateSelectedVisual();
             });

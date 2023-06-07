@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7be4796037f9b2d48ac933cf5f589e7d, type: 3}
-  m_Name: Mineradora
+  m_Name: Sugadora
   m_EditorClassIdentifier: 
-  nameString: Mineradora
-  prefab: {fileID: 1371791597874143831, guid: 524c3141cda8e3f46aacf5c6807aee44, type: 3}
+  nameString: Sugador de Recurso
+  prefab: {fileID: 1371791597874143831, guid: dd233946a2205f645a27205ca1221308, type: 3}
   hasResourceGeneratorData: 1
   resourceGeneratorData:
     timerMax: 2
-    resourceType: {fileID: 11400000, guid: 4ff6f94364e96d14fb29db4de0726098, type: 2}
+    resourceType: {fileID: 11400000, guid: 2175fb90c3bb676408124d639b265384, type: 2}
     resourceDetectionRadius: 7
-    maxResourceAmount: 7
-  sprite: {fileID: 21300000, guid: 78860f195e8664141a50fc198d9c9f05, type: 3}
-  minConstructionRadius: 0
+    maxResourceAmount: 5
+  sprite: {fileID: 21300000, guid: 9d04482223788634e814ba9903f8b16f, type: 3}
+  minConstructionRadius: 7
   constructionResourceCostArray:
   - resourceType: {fileID: 11400000, guid: 4ff6f94364e96d14fb29db4de0726098, type: 2}
-    amount: 10
+    amount: 40
   healthAmountMax: 100
-  constructionTimerMax: 0
+  constructionTimerMax: 2

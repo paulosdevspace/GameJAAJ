@@ -43,18 +43,19 @@ public class CriadorDeConstrucao : MonoBehaviour
     void Update()
     {
         Vector3 posicaospawn = protagonista.transform.position;
-        posicaospawn.y = protagonista.transform.position.y + 2f;
+        posicaospawn.y = protagonista.transform.position.y + 2.5f;
         if (activeBuildingType != null)
         {
-            if (Input.GetMouseButtonDown(0) && CanSpawnBuilding(activeBuildingType, UtilsClass.GetWorldMousePosition()))
+            if (Input.GetKeyDown(KeyCode.Space) && CanSpawnBuilding(activeBuildingType,  posicaospawn))
             {
                 if (!EventSystem.current.IsPointerOverGameObject())
                 {
-                    if (ResourceManager.instance.CanAfford(activeBuildingType.constructionResourceCostArray))
-                    {
-                        ResourceManager.instance.SpendResources(activeBuildingType.constructionResourceCostArray);
-                        Instantiate(activeBuildingType.prefab, posicaospawn, Quaternion.identity);
-                    }
+                        if (ResourceManager.instance.CanAfford(activeBuildingType.constructionResourceCostArray))
+                        {
+                            ResourceManager.instance.SpendResources(activeBuildingType.constructionResourceCostArray);
+                            Instantiate(activeBuildingType.prefab, posicaospawn, Quaternion.identity);
+                        Debug.Log(activeBuildingType);
+                        }
                 }
             }
         }

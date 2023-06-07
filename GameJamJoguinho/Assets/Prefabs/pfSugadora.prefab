@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6160281605664789677}
   - component: {fileID: -8711223311842597310}
   m_Layer: 0
-  m_Name: pfMineradora
+  m_Name: pfSugadora
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc17d2264a079f458e314279436e333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingType: {fileID: 11400000, guid: a3af353b2991f674f871e99c4abaa00b, type: 2}
+  buildingType: {fileID: 11400000, guid: f40b7d34551b25a42adb1c85d9b308bb, type: 2}
 --- !u!114 &6160281605664789677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,7 +186,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 78860f195e8664141a50fc198d9c9f05, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d04482223788634e814ba9903f8b16f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
