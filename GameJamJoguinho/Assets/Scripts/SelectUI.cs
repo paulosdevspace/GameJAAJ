@@ -30,7 +30,6 @@ public class SelectUI : MonoBehaviour
             {
                 print("trocou " + buildingTypeSO.nameString);
                 buildingManager.SetActiveBuildingType(buildingTypeSO);
-                UpdateSelectedVisual();
             });
 
             buildingBtnDictionary[buildingTypeSO] = buildingBtnTransform;
@@ -39,19 +38,5 @@ public class SelectUI : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        UpdateSelectedVisual();
-    }
-
-    private void UpdateSelectedVisual()
-    {
-        foreach (BuildingTypeSO buildingTypeSO in buildingBtnDictionary.Keys)
-        {
-            buildingBtnDictionary[buildingTypeSO].Find("selected").gameObject.SetActive(false);
-        }
-
-        BuildingTypeSO activeBuildingType = buildingManager.GetActiveBuildingType();
-        buildingBtnDictionary[activeBuildingType].Find("selected").gameObject.SetActive(true);
-    }
+ 
 }
