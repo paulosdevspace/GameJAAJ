@@ -52,6 +52,7 @@ public class Enemy : MonoBehaviour
     private void healthSystem_OnDied(object sender, EventArgs e)
     {
         Destroy(gameObject);
+        SoundManager.Instance.PlaySound(SoundManager.Sound.InimigoBate);
 
     }
 

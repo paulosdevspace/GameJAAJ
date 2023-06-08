@@ -80,6 +80,8 @@ public class ResourceManager : MonoBehaviour
         {
             resourceAmountDictionary[resourceAmount.resourceType] -= resourceAmount.amount;
 
+            OnResourceAmountChanged?.Invoke(this, EventArgs.Empty);
+
         }
     }
 

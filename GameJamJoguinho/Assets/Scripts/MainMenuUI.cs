@@ -8,7 +8,7 @@ public class MainMenuUI : MonoBehaviour
     {
         transform.Find("playBtn").GetComponent<Button>().onClick.AddListener(() =>
         {
-            GameSceneManager.Load(GameSceneManager.Scene.GameScene);
+            GameSceneManager.Load(GameSceneManager.Scene.Cutscene);
         });        
         
         transform.Find("quitBtn").GetComponent<Button>().onClick.AddListener(() =>

@@ -38,17 +38,4 @@ public class Vitoria : MonoBehaviour
         }
         return true;
     }
-
-    private void updateResourceAmount()
-    {
-        foreach (ResourceTypeSO resourceType in resourceTypeList.list)
-        {
-            Transform resourceTransform = resourceTypeTransformDictionary[resourceType];
-
-
-            int resourceAmount = ResourceManager.instance.GetResourceAmount(resourceType);
-
-            resourceTransform.Find("text").GetComponent<TextMeshProUGUI>().SetText(resourceAmount.ToString());
-        }
-    }
 }

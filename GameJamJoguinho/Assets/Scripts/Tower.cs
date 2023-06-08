@@ -49,6 +49,7 @@ public class Tower : MonoBehaviour
             if (targetEnemy != null)
             {
                 Projectile.Create(projectileSpawnPosition, targetEnemy);
+                SoundManager.Instance.PlaySound(SoundManager.Sound.Tiro);
             }
         }
     }

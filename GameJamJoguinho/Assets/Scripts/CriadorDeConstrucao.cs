@@ -54,7 +54,8 @@ public class CriadorDeConstrucao : MonoBehaviour
                         {
                             ResourceManager.instance.SpendResources(activeBuildingType.constructionResourceCostArray);
                             Instantiate(activeBuildingType.prefab, posicaospawn, Quaternion.identity);
-                        Debug.Log(activeBuildingType);
+                            SoundManager.Instance.PlaySound(SoundManager.Sound.Construcao);
+                            Debug.Log(activeBuildingType);
                         }
                 }
             }

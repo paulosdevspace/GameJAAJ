@@ -53,6 +53,7 @@ public class ResourcesUI : MonoBehaviour
             int resourceAmount = ResourceManager.instance.GetResourceAmount(resourceType);
 
             resourceTransform.Find("text").GetComponent<TextMeshProUGUI>().SetText(resourceAmount.ToString());
+
         }
     }
 }

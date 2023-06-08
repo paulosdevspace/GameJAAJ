@@ -7,12 +7,10 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance { get; private set; }
     public enum Sound
     {
-        BuildingPlaced,
-        BuildingDamaged,
-        BuildingDestroyed,
-        EnemyDie,
-        EnemyHit,
-        GameOver,
+        Construcao,
+        InimigoBate,
+        Mineradora,        
+        Tiro,
 
     }
 
