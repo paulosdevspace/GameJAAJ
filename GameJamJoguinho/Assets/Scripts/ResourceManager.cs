@@ -79,6 +79,7 @@ public class ResourceManager : MonoBehaviour
         foreach (ResourceAmount resourceAmount in resourceAmountArray)
         {
             resourceAmountDictionary[resourceAmount.resourceType] -= resourceAmount.amount;
+            OnResourceAmountChanged?.Invoke(this, EventArgs.Empty);
 
             OnResourceAmountChanged?.Invoke(this, EventArgs.Empty);
 

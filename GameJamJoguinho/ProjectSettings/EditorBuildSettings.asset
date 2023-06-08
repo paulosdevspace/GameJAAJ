@@ -5,7 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+<<<<<<< HEAD
   - enabled: 1
     path: Assets/Scenes/MainMenuScene.unity
     guid: 7c0b38aa093287744aee7be23695ee1a
+=======
+  - enabled: 0
+    path: Assets/Scenes/Paulo.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Cutscene.unity
+    guid: 55c10dfd44eaf584081aee8bee8e7bdb
+>>>>>>> 36ca188742dd87271ef8858b66e9a59905fd18f3
   m_configObjects: {}

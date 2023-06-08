@@ -2189,7 +2189,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 224108445}
   lines:
-  - parabum parararararapipi
+  - Sua nave deu mal funcionamento e acabou caindo nesse planeta estranho
+  - "Voc\xEA vai precisar de ferro para poder consertar a nave, mas, aparentemente
+    o ferro nesse planeta \xE9 liquido"
+  - "Mas n\xE3o se preocupe, criamos um sugador de min\xE9rios para essa situa\xE7\xE3o,
+    est\xE1 ali embaixo na esquerda, bem no meio"
+  - "O ferro est\xE1 indicado no mini-mapa no canto inferior direito, s\xE3o os pontos
+    cinzas."
+  - "Huh, h\xE1 criaturas estranhas se aproximando, parecem...agua-vivas? cogumelos?"
+  - "\xC1gua-melos!"
+  - "\xC9 para isso que existem as torretas, \xE9 o ultimo item aqui do lado, costrua
+    elas para defender a nave enquanto voc\xEA tenta chegar no ferro"
+  - 'As torretas custam bauxitas para serem construidas, '
+  - "Para construir basta selecionar o que quer e ent\xE3o clicar na tela, o robo
+    ir\xE1 construir bem na frente dele"
   textSpeed: 0.1
 --- !u!114 &1852721789
 MonoBehaviour:
