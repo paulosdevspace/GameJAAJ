@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class Enemy : MonoBehaviour
 {
@@ -23,13 +22,12 @@ public class Enemy : MonoBehaviour
     private HealthSystem healthSystem;
     private Transform targetTransform;
     private Rigidbody2D rigidBody2D;
-
-    private Animator animator;
+    //private Animator animator;
 
     private void Start()
     {
         rigidBody2D = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
 
         if (CriadorDeConstrucao.Instance.GetNavePrincipal() != null)
         {
