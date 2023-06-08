@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameString: NavePrincipal
   prefab: {fileID: 6536467911276940277, guid: 1f77e91c3408fab45a951cd091e8dcfc, type: 3}
-  hasResourceGeneratorData: 1
+  hasResourceGeneratorData: 0
   resourceGeneratorData:
     timerMax: 1
     resourceType: {fileID: 11400000, guid: 4ff6f94364e96d14fb29db4de0726098, type: 2}

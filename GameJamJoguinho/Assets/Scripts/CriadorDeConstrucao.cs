@@ -38,7 +38,7 @@ public class CriadorDeConstrucao : MonoBehaviour
     {
         //SoundManager.Instance.PlaySound(SoundManager.Sound.GameOver);
 
-        //GameOverUI.Instance.Show();
+        GameOverUI.Instance.Show();
     }
     void Update()
     {
@@ -132,7 +132,7 @@ public class CriadorDeConstrucao : MonoBehaviour
         //errorMessage = "Too far from any building";
         return false;
     }
-    public Building GetHQBuilding()
+    public Building GetNavePrincipal()
     {
         return navePrincipal;
     }

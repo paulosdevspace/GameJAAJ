@@ -29,9 +29,9 @@ public class Enemy : MonoBehaviour
     {
         rigidBody2D = GetComponent<Rigidbody2D>();
 
-        if (CriadorDeConstrucao.Instance.GetHQBuilding() != null)
+        if (CriadorDeConstrucao.Instance.GetNavePrincipal() != null)
         {
-            targetTransform = CriadorDeConstrucao.Instance.GetHQBuilding().transform;
+            targetTransform = CriadorDeConstrucao.Instance.GetNavePrincipal().transform;
         }
 
         healthSystem = GetComponent<HealthSystem>();
@@ -65,6 +65,7 @@ public class Enemy : MonoBehaviour
         if (building != null)
         {
             //collided
+            Debug.Log("bateu");
             HealthSystem healthSystem = building.GetComponent<HealthSystem>();
             healthSystem.Damage(10);
             this.healthSystem.Damage(99);
@@ -125,9 +126,9 @@ public class Enemy : MonoBehaviour
         }
         if (targetTransform == null)
         {
-            if (CriadorDeConstrucao.Instance.GetHQBuilding() != null)
+            if (CriadorDeConstrucao.Instance.GetNavePrincipal() != null)
             {
-                targetTransform = CriadorDeConstrucao.Instance.GetHQBuilding().transform;
+                targetTransform = CriadorDeConstrucao.Instance.GetNavePrincipal().transform;
             }
         }
 
