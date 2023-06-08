@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class Enemy : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         rigidBody2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
         if (CriadorDeConstrucao.Instance.GetNavePrincipal() != null)
         {
@@ -123,6 +125,7 @@ public class Enemy : MonoBehaviour
                 }
 
             }
+
         }
         if (targetTransform == null)
         {
